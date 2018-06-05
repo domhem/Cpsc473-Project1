@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Page</title>
+
+  <!--
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/register_styles.css">
+
+
+
+
+  <!-- - - - Include the above in your HEAD tag ---------->
+</head>
+
+<body>
+
+  <!-- Welcome Menu Sidebar - - - - - - - - - - - - - - - - - - - - - -->
+  <div>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-padding" style="display:none;right:0;" id="welcomeMenu">
+      <button class="w3-button w3-xxlarge fa fa-window-close w3-light-grey" onclick="closeWelcomeMenu()"></button>
+      <label class="w3-bar-item w3-center w3-light-grey" href="">MENU</label>
+
+      <div class="w3-row w3-section w3-bar-item w3-button">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-sign-in"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item" font size="15px" href="/login">Login</a></div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-address-book"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item" font size="15px" href="/register">Sign Up</a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Header - - - - - - - - - - - - - - - - - - - - - -->
+  <div id="main">
+    <div class="w3-display-container w3-dark-gray w3-opacity">
+      <a href="/"><i class="fa fa-home w3-button"></i></a>
+      <img class="w3-display-middle" src="images/website_logo.png" style="height:50px">
+      <a><i class="fa fa-navicon w3-button w3-right" onclick="openWelcomeMenu()" id="nav"></i></a>
+    </div>
+
+    <div class="login-container">
+      <div class="w3-container w3-card-4 w3-margin-top">
+
+        <h1 class="w3-center w3-light-grey">SIGN UP</h1>
+
+        <div class="row">
+          <div class="col-md-6">
+            <form action="" method="post" id="registerForm" role="form" data-register="form">
+              <fieldset>
+                <legend class="text-center">Valid information is required to register. (<span class="req">* required</span>)</legend>
+
+                <div class="form-group">
+                  <label for="email"><span class="req">* </span> Email Address: </label>
+                  <input class="form-control w3-border w3-round w3-light-grey" style="width:100%" type="text" name="email" placeholder="email@example.com" id="email" required />
+                  <div class="error" id="emailErr"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="username"><span class="req">* </span> Username: (must lenght of 6 to 20 characters)</label>
+                  <input class="form-control w3-border w3-round w3-light-grey" style="width:100%" type="text" name="userName" id="userName" placeholder="user_1" required />
+                  <div class="error" id="userNameErr"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="firstname"><span class="req">* </span> First name: </label>
+                  <input class="form-control w3-border w3-round w3-light-grey" style="width:100%" type="text" name="firstName" id="firstName" onkeyup="Validate(this)" required />
+                  <div id="errFirst"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="lastname"><span class="req">* </span> Last name: </label>
+                  <input class="form-control w3-border w3-round w3-light-grey" style="width:100%" type="text" name="lastName" id="lastName" onkeyup="Validate(this)" placeholder="hyphen or single quote OK" required />
+                  <div id="errLast"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password"><span class="req">* </span> Password: </label>
+                  <input required name="password" type="password" class="form-control inputpass w3-border w3-round w3-light-grey" style="width:100%" minlength="4" maxlength="16" id="pass1" />
+                </div>
+                <div>
+                  <label for="password"><span class="req">* </span> Password Confirm: </label>
+                  <input required name="password" type="password" class="form-control inputpass w3-border w3-round w3-light-grey" style="width:100%" minlength="4" maxlength="16" placeholder="Enter again to validate" id="pass2" onkeyup="checkPass(); return false;" />
+                  <span id="confirmMessage" class="confirmMessage"></span>
+                </div>
+
+                <div class="form-group">
+
+                  <!-- <?php //$date_entered = date('m/d/Y H:i:s'); ?> -->
+                  <!-- <input type="hidden" value="<?php //echo $date_entered; ?>" name="dateregistered">
+                  <input type="hidden" value="0" name="activate" />
+                  <hr> -->
+
+                  <br>
+                  <br>
+
+                  <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms"><label for="terms">  I agree with the <a href="/tos" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label>
+                  <span class="req">* </span>
+                </div>
+
+                <div class="form-group">
+                  <input class="w3-block w3-section w3-dark-gray w3-padding btn btn-default" type="submit" name="submit_reg" value="Register">
+                </div>
+
+              </fieldset>
+            </form>
+            <!-- ends register form -->
+
+          </div>
+          <!-- ends col-6 -->
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer w3-dark-gray w3-opacity">
+    <p class="center">&emsp;&copy; CPSC473-Section 2 Team 2</p>
+  </footer>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="scripts/validation.js"></script>
+  <script type="text/javascript">
+    document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+  </script>
+
+  <script src="scripts/profile_sidebar.js" charset="utf-8"></script>
+  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/register_main.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/login_styles.css">
+  <title>Log In</title>
+</head>
+
+<body>
+
+  <!-- Welcome Menu Sidebar - - - - - - - - - - - - - - - - - - - - - -->
+  <div>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-padding" style="display:none;right:0;" id="welcomeMenu">
+      <button class="w3-button w3-xxlarge fa fa-window-close w3-light-grey" onclick="closeWelcomeMenu()"></button>
+      <label class="w3-bar-item w3-center w3-light-grey" href="">MENU</label>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-sign-in"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item" font size="15px" href="/login">Login</a></div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-address-book"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item" font size="15px" href="/register">Sign Up</a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Header - - - - - - - - - - - - - - - - - - - - - -->
+  <div id="main">
+    <div class="w3-display-container w3-dark-gray w3-opacity">
+      <a href="/"><i class="fa fa-home w3-button"></i></a>
+      <img class="w3-display-middle" src="images/website_logo.png" style="height:50px">
+      <a><i class="fa fa-navicon w3-button w3-right" onclick="openWelcomeMenu()" id="nav"></i></a>
+    </div>
+
+    <div class="login-container">
+
+      <div class="w3-container w3-center w3-margin w3-margin-top w3-card-4">
+
+        <h1 class="w3-center w3-light-grey">LOGIN</h1>
+
+        <form data-log-in="form">
+          <div class="email-container">
+            <div class="w3-section">
+              <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope"></i></div>
+              <div class="w3-rest" style="width:100px"><label font size="15px">Email</label></div>
+            </div>
+          </div>
+
+          <div>
+            <input class="w3-border w3-round w3-light-grey" style="width:60%" type="email" name="username">
+          </div>
+
+          <div class="pass-container">
+            <div class="w3-section">
+              <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-key"></i></div>
+              <div class="w3-rest" style="width:150px"><label font size="15px">Password</label></div>
+            </div>
+          </div>
+
+          <div>
+            <input class="w3-border w3-round w3-light-grey" style="width:60%" type="password" name="password">
+          </div>
+
+          <div>
+            <button type="submit" class="w3-block w3-section w3-dark-gray w3-padding btn btn-default">Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer w3-dark-gray w3-opacity">
+      <p>&emsp;&copy; CPSC473-Section 2 Team 2</p>
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+  <script src="scripts/profile_sidebar.js" charset="utf-8"></script>
+  <script src="scripts/login_formhandler.js" charset="utf-8"></script>
+  <script src="scripts/login_datastore.js" charset="utf-8"></script>
+  <script src="scripts/login_remotedatastore.js" charset="utf-8"></script>
+  <script src="scripts/login_main.js" charset="utf-8"></script>
+</body>
+
+</html>

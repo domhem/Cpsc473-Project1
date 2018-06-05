@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/profile_styles.css">
+  <title>Profile Page</title>
+</head>
+
+<body>
+
+  <!-- Welcome Menu Sidebar - - - - - - - - - - - - - - - - - - - - - -->
+  <div>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-padding" style="display:none;right:0;" id="noAuthMenu">
+      <button class="w3-button w3-xxlarge fa fa-window-close w3-light-grey" onclick="closeNoAuthMenu()"></button>
+      <label class="w3-bar-item w3-center w3-light-grey" href="">MENU</label>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-sign-in"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item" font size="15px" href="/login">Login</a></div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-address-book"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item" font size="15px" href="/register">Sign Up</a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main Menu Sidebar - - - - - - - - - - - - - - - - - - - - - -->
+  <div>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-padding" style="display:none;right:0;" id="optionMenu">
+      <button class="w3-button w3-xxlarge fa fa-window-close w3-light-grey" onclick="closeOptionMenu()"></button>
+      <label class="w3-bar-item w3-center w3-light-grey" href="">MENU</label>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="openPicMenu()">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user-circle"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item">Edit Profile Image</a></div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="openEditMenu()">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-address-card-o"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item">Edit Profile Information</a></div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="openSMMenu()">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-facebook-official"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item">Edit Social Media Information</a></div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item w3-button" onclick="">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-sign-out"></i></div>
+        <div class="w3-rest"><a class="w3-bar-item">Logout</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Profile Info Sidebar - - - - - - - - - - - - - - - - - - - - - -->
+  <form data-profile="form">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-padding" style="display:none;right:0;" id="editMenu">
+      <button class="w3-button w3-xxlarge fa fa-arrow-left w3-light-grey" onclick="closeEditMenu()"></button>
+      <label class="w3-bar-item w3-center w3-light-grey" href="">EDIT PROFILE INFORMATION</label>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+        <div class="w3-rest">
+          <input id="firstnameinput" class="w3-input w3-border w3-round w3-light-grey" name="firstName" type="text" placeholder="Edit First Name">
+        </div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa"></i></div>
+        <div class="w3-rest">
+          <input id="lastnameinput" class="w3-input w3-border w3-round w3-light-grey" name="lastName" type="text" placeholder="Edit Last Name">
+        </div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-commenting"></i></div>
+        <div class="w3-rest">
+          <input id="sloganinput" class="w3-input w3-border w3-round w3-light-grey" name="slogan" type="text" placeholder="Edit Slogan">
+        </div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-file-text"></i></div>
+        <div class="w3-rest">
+          <textarea id="aboutinput" class="w3-input w3-border w3-round w3-light-grey" rows="4" name="about" placeholder="Edit About Me"></textarea>
+        </div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+        <div class="w3-rest">
+          <input id="phoneinput" class="w3-input w3-border ww3-bar-item 3-round w3-light-grey" name="phone" type="text" placeholder="Edit Phone Number">
+        </div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope"></i></div>
+        <div class="w3-rest">
+          <input id="emailinput" class="w3-input w3-border w3-round w3-light-grey" name="email" type="email" placeholder="Edit Email">
+        </div>
+      </div>
+
+      <button class="w3-button w3-block w3-section w3-dark-gray w3-padding" value="submit">Save Changes</button>
+    </div>
+  </form>
+
+  <!-- Edit Social Media Sidebar - - - - - - - - - - - - - - - - - - - - - -->
+  <form data-social-media="form">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-padding" style="display:none;right:0;" id="smMenu">
+      <button class="w3-button w3-xxlarge fa fa-arrow-left w3-light-grey" onclick="closeSMMenu()"></button>
+      <label class="w3-bar-item w3-center w3-light-grey" href="">EDIT SOCIAL MEDIA INFORMATION</label>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-facebook-square"></i></div>
+        <div class="w3-rest">
+          <input id="fbinput" class="w3-input w3-border w3-round w3-light-grey" name="pFacebook" type="url" placeholder="Link to Facebook Account">
+        </div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-twitter-square"></i></div>
+        <div class="w3-rest">
+          <input id="tinput" class="w3-input w3-border w3-round w3-light-grey" name="pTwitter" type="url" placeholder="Link to Twitter Account">
+        </div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-instagram"></i></div>
+        <div class="w3-rest">
+          <input id="iinput" class="w3-input w3-border ww3-bar-item 3-round w3-light-grey" name="pInsta" type="url" placeholder="Link to Instagram Account">
+        </div>
+      </div>
+
+      <div class="w3-row w3-section w3-bar-item">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-linkedin-square"></i></div>
+        <div class="w3-rest">
+          <input id="linput" class="w3-input w3-border w3-round w3-light-grey" name="pLinkedIn" type="url" placeholder="Link to LinkedIn Account">
+        </div>
+      </div>
+
+      <button class="w3-button w3-block w3-section w3-dark-gray w3-padding" value="submit">Save Changes</button>
+    </div>
+  </form>
+
+  <!-- Edit Profile Picture Sidebar - - - - - - - - - - - - - - - - - - - - - -->
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-padding" style="display:none;right:0;" id="picMenu">
+    <button class="w3-button w3-xxlarge fa fa-arrow-left w3-light-grey" onclick="closePicMenu()"></button>
+    <label class="w3-bar-item w3-center w3-light-grey" href="">EDIT PROFILE IMAGE</label>
+    <input type="file" class="w3-bar-item" onchange="previewFile()"><br>
+    <h3 class="w3-bar-item w3-center">Preview</h3>
+    <img class="w3-bar-item" src="images/upload_empty.png" id="preview">
+    <button class="w3-button w3-block w3-section w3-dark-gray w3-padding" data-profile-pic="btn">Save Changes</button>
+    <!-- onclick="editFile()" -->
+  </div>
+
+  <!-- Header - - - - - - - - - - - - - - - - - - - - - -->
+  <div id="main">
+
+    <div class="w3-display-container w3-dark-gray w3-opacity" id="authNav">
+      <a href="/"><i class="fa fa-home w3-button"></i></a>
+      <img class="w3-display-middle logo" src="images/website_logo.png" style="height:50px">
+      <a><i class="fa fa-cog w3-button w3-right" onclick="openOptionMenu()" id="nav"></i></a>
+    </div>
+
+    <div class="w3-display-container w3-dark-gray w3-opacity" id="noAuthNav">
+      <a href="/"><i class="fa fa-home w3-button"></i></a>
+      <img class="w3-display-middle logo" src="images/website_logo.png" style="height:50px">
+      <a><i class="fa fa-navicon w3-button w3-right" onclick="openNoAuthMenu()" id="nav2"></i></a>
+    </div>
+
+
+    <!-- Profile Container split into two sections (top/bottom) -->
+    <div class="profile-container page-wrap">
+      <div class="w3-container w3-center w3-margin w3-card-4">
+        <!-- Top Container for profile information(profile image,name,logo,about me paragraph) -->
+        <div class="w3-container w3-cell-top">
+          <img src="images/default_profile.png" alt="Profile" class="w3-margin-top w3-image" id="profilePic">
+          <h2 id="profileName">My Name</h2>
+          <h3 id="profileSlogan">My random logo blah blah blah</h3>
+          <pre id="profileAbout">Write information about yourself!</pre>
+        </div>
+        <!-- Bottom Container for contact information and social media links -->
+        <!-- Contains two cotainers put in a row(left/right), each taking 50% space -->
+        <div class="w3-container w3-cell-bottom w3-cell-row">
+          <div class="w3-container w3-cell" style="width:50%">
+            <h3>Contact Information</h3>
+            <h4 id="profilePhone">999-999-9999</h4>
+            <h4 id="profileEmail">email@csu.fullerton.edu</h4>
+          </div>
+          <div class="w3-container w3-cell" style="width:50%">
+            <h3>Social Media</h3>
+            <a href="" id="fb_link" onclick="" hidden><i class="fa fa-facebook-square"></i></a>
+            <a href="" id="t_link" onclick="" hidden><i class="fa fa-twitter-square"></i></a>
+            <a href="" id="i_link" onclick="" hidden><i class="fa fa-instagram"></i></a>
+            <a href="" id="l_link" onclick="" hidden><i class="fa fa-linkedin-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer w3-dark-gray w3-opacity">
+      <p>&emsp;&copy; CPSC473-Section 2 Team 2</p>
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+  <script src="scripts/profile_sidebar.js" charset="utf-8"></script>
+  <script src="scripts/profile_formhandler.js" charset="utf-8"></script>
+  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+  <script src="scripts/profile_editprofile.js" charset="utf-8"></script>
+  <script src="scripts/profile_editpicture.js" charset="utf-8"></script>
+  <script src="scripts/profile_main.js" charset="utf-8"></script>
+</body>
+
+</html>

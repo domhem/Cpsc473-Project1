@@ -1,0 +1,61 @@
+{
+	"type": "Collection",
+	"properties": {
+		"userid": {
+			"name": "userid",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "userid",
+			"order": 0
+		},
+		"email": {
+			"name": "email",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "email",
+			"order": 1
+		},
+		"password": {
+			"name": "password",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "password",
+			"order": 2
+		},
+		"firstName": {
+			"name": "firstName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "firstName",
+			"order": 3
+		},
+		"lastName": {
+			"name": "lastName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "lastName",
+			"order": 4
+		},
+		"profileImgUrl": {
+			"name": "profileImgUrl",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "profileImgUrl",
+			"order": 5
+		},
+		"socialNetworks": {
+			"name": "socialNetworks",
+			"type": "object",
+			"typeLabel": "object",
+			"required": false,
+			"id": "socialNetworks",
+			"order": 6
+		}
+	}
+}

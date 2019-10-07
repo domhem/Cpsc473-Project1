@@ -40,6 +40,7 @@ To start the server
 
 ```
 npm run dev
+Visit localhost:3000
 ```
 To start the back end server
 ```

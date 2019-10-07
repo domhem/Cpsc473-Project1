@@ -27,9 +27,9 @@ cd SiteName
 Clone the repo go into the main directory
 
 ```
-git clone https://github.com/dannyboy15/cpsc473_project_1.git
+git clone https://github.com/domhem/Cpsc473-Project1.git
 
-cd cpsc473_project_1
+cd Cpsc473-Project1
 
 npm install get-dependencies --save
 npm install --save-dev nodemon
